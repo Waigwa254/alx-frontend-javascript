@@ -1,4 +1,12 @@
 import getFullResponseFromAPI from './1-promise';
 
-console.log(getFullResponseFromAPI(true));
-console.log(getFullResponseFromAPI(false));
+const success = true; // Change this to false to see the rejection handling
+
+getFullResponseFromAPI(success)
+  .then(response => {
+	      console.log(response);
+	    })
+  .catch(error => {
+	      console.error(error);
+	    });
+
